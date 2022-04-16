@@ -47,7 +47,7 @@
 		<section class="hero">
 		<div class="container hero-content">
 <h1 class="heto-title">Эффективные решения для вашего бизнеса</h1>
-<button class="hero-btn" type="button">Заказать услугу</button>
+<button class="hero-btn" type="button" data-modal-open>Заказать услугу</button>
         </div>
 		</section>
 			<!-- Секция Наши особенности -->
@@ -323,7 +323,28 @@
 				</a></li>
 			</ul>
 		</div>
+		<div class="sub-wrapper">
+			<h3 class="sub-title">Подпишитесь на рассылку</h3>
+			<form class="footer-form">
+				<label for="email"></label>
+				<input class="footer-mail" type="email" name="email" placeholder="E-mail">
+				<span class="fotter-btn-box">
+					<button class="sub-btn" type="submit">Подписаться</button>
+				</span>
+			</form>
+		</div>
 		</div>
 	</footer>
+<!-- Модальное окошшко -->
+		<div class="backdrop is-hidden" data-modal>
+			<div class="modal-wrapper">
+				<button class="modal-btn" type="button" data-modal-close>
+					<svg class="close-icon" width="11" height="11">
+						<use href="./images/icons.svg#icon-close"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+<script src="./js/modal.js"></script>
 </body>
 </html>
