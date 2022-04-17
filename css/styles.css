@@ -107,6 +107,7 @@ img {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
 .nav-link:not(:last-child) {
   margin-right: 50px;
 }
@@ -114,6 +115,7 @@ img {
 .nav-link {
   list-style-type: none;
 }
+
 .nav-link-txt {
   font-family: var(--main-font);
   font-weight: 500;
@@ -125,13 +127,29 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 31px;
+  transition: color var(--anim-fast);
+  position: relative;
 }
+
 .nav-link-txt:focus,
 .nav-link-txt:hover {
   color: var(--accent-color);
 }
+
 .page {
- color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.current::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 
 /* Контактные данные */
@@ -659,6 +677,7 @@ img {
   padding: 6px 22px;
   border: 1px solid transparent;
   border-radius: 4px;
+  background-color: var(--third-bg-color);
   transition: color var(--anim-fast), box-shadow var(--anim-fast),
     background-color var(--anim-fast);
 }
