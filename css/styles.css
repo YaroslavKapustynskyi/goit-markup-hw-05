@@ -254,6 +254,7 @@ img {
   font-weight: bold;
   line-height: 1.14;
   text-transform: uppercase;
+  color: var(--main-font-color);
 }
 .features-text {
   line-height: 1.71;
@@ -287,11 +288,33 @@ img {
 .about-item:not(:last-child) {
   margin-right: 30px;
 }
+.about-wrapper {
+  position: relative;
+}
+
+.about-descr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--sec-bg-font-color);
+  width: 100%;
+  min-height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
 /* Наша команда */
 .team {
   background-color: var(--third-bg-color);
   text-align: center;
 }
+
 .team-wrapper {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -309,10 +332,13 @@ img {
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+  color: var(--main-font-color);
 }
+
 .team-list {
   list-style-type: none;
 }
+
 .team-card {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -324,6 +350,7 @@ img {
 .team-card:not(:last-child) {
   margin-right: 30px;
 }
+
 .team-card {
   padding-bottom: 0px;
 }
@@ -332,7 +359,9 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  color: var(--main-font-color);
 }
+
 .team-card-txt {
   font-size: 16px;
   line-height: 1.19;
@@ -340,6 +369,7 @@ img {
   color: var(--secondary-font-color);
   margin-top: 10px;
 }
+
 .socials {
   display: flex;
   align-items: center;
@@ -352,28 +382,37 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  color: var(--sec-bg-font-color);
+  transition: background-color var(--anim-fast),
+    color var(--anim-fast);
 }
+
 .socials-link:hover,
 .socials-link:focus {
   background-color: var(--accent-color);
+  color: var(--sec-bg-font-color);
 }
 
 .socials-link:hover .socials-icon,
 .socials-link:focus .socials-icon {
-  fill: var(--sec-bg-font-color);
+  fill: currentColor;
+  transition: fill var(--anim-fast);
 }
 
 .socials-item:not(:last-child) {
   margin-right: 10px;
 }
+
 .socials-link {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .socials-icon {
   fill: var(--socials-icon-color);
 }
+
 /* Секция постоянные клиенты */
 
 .clients-list {
@@ -394,7 +433,9 @@ img {
   border: 1px solid var(--socials-icon-color);
   border-radius: 4px;
   color: var(--socials-icon-color);
+  transition: color var(--anim-fast), border var(--anim-fast);
 }
+
 .clients-icon {
   fill: currentColor;
 }
@@ -402,16 +443,18 @@ img {
 .clients-link:hover,
 .clients-link:focus {
   border: 1px solid var(--accent-color);
-  border-radius: 4px;
+  /* border-radius: 4px; */
   cursor: pointer;
   color: var(--accent-color);
 }
+
 .clients-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  color: var(--main-font-color);
 }
 
 /* Футер */
@@ -466,8 +509,7 @@ img {
 }
 
 .address-mail,
-.address-phone,
-.address-link {
+.address-phone{
   font-family: var(--main-font);
   font-style: normal;
   line-height: 1.71;
