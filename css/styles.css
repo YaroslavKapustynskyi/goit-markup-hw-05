@@ -185,6 +185,7 @@ img {
   letter-spacing: 0.02em;
   color: var(--secondary-font-color);
   text-decoration: none;
+  transition: var(--anim-fast);
 }
 .header-phone:focus,
 .header-phone:hover,
@@ -401,8 +402,7 @@ img {
   height: 44px;
   border-radius: 50%;
   color: var(--sec-bg-font-color);
-  transition: background-color var(--anim-fast),
-    color var(--anim-fast);
+  transition: background-color var(--anim-fast);
 }
 
 .socials-link:hover,
@@ -414,7 +414,6 @@ img {
 .socials-link:hover .socials-icon,
 .socials-link:focus .socials-icon {
   fill: currentColor;
-  transition: fill var(--anim-fast);
 }
 
 .socials-item:not(:last-child) {
