@@ -185,7 +185,8 @@ img {
   letter-spacing: 0.02em;
   color: var(--secondary-font-color);
   text-decoration: none;
-  transition: var(--anim-fast);
+  transition: color var(--anim-fast);
+  
 }
 .header-phone:focus,
 .header-phone:hover,
